@@ -18,7 +18,7 @@
                     <img src="img/search-blue.png" alt="Search" href="search.php"/>
                 </a>
                 <br>
-                <button type="button" class="btn btn-outlined top-padding">Search Catalogue</button>
+                <button type="button" class="btn btn-outlined top-padding">Search Catalog</button>
             </div>
         </div>
         <div class="col-sm-6" style="text-align:left;">
