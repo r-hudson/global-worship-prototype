@@ -1,31 +1,16 @@
-<?php
-
-
-
-// select which db to use
-mysql_select_db($dbname) 
-// send error if connecting to db failed
-or die(mysql_error());
-
-$name = $_GET["name"];
-$language = $_GET["lang"];
-
-
-$query = 
-"";
-
-$result = mysql_query($query) or die(mysql_error());
-while ($r = mysql_fetch__array($result)) {
-	
-}
-
-<html>
-	<head>
-	</head>
-
-	<body>
-		Hello World!
-	</body>
-</html>
-
-?>
+<?php include "header.php"; ?>
+	<script type="text/javascript" src="../js/search.js"></script>
+	<form action="search.html">
+        <div>Search keywords: <input type="text" name="keyword" id="keyword"></div>
+        <div>Art form: <select name="art_form" id="artForm"></select></div>
+        <div>Language: <select id="language" name="language"></select></div>
+        <div>Genre: <select id="genre" name="genre"></select></div>
+        <input type="submit" value="Submit">
+    </form>
+    <div id="searchResults"></div>
+    <div id="pageNavigation">
+        <a><input type="button" value="previous" id="previous" /></a>
+        <span id="pageNumbers"></span>
+        <a><input type="button" value="next" id="next" /></a>
+    </div>
+<?php include "footer.php"; ?>
