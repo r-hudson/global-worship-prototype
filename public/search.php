@@ -1,6 +1,7 @@
 <?php include "header.php"; ?>
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript" src="js/search.js"></script>
-	<form action="search.html">
+	<form action="search.php">
         <div>Search keywords: <input type="text" name="keyword" id="keyword"></div>
         <div>Art form: <select name="art_form" id="artForm"></select></div>
         <div>Language: <select id="language" name="language"></select></div>
