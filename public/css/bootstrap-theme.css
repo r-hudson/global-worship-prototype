@@ -7,6 +7,10 @@
   color: #9BC7EE;
 }
 
+.navbar-brand img {
+	max-height: 40px;
+}
+
 .navbar-default .navbar-nav > li > a {
   color: #9BC7EE;
 }
