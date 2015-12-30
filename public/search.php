@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Search</title>
-    <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
-    <script type="text/javascript" src="../js/search.js"></script>
-</head>
-<body>
-    <form action="search.html">
+<?php include "header.php"; ?>
+	<script type="text/javascript" src="../js/search.js"></script>
+	<form action="search.html">
         <div>Search keywords: <input type="text" name="keyword" id="keyword"></div>
         <div>Art form: <select name="art_form" id="artForm"></select></div>
         <div>Language: <select id="language" name="language"></select></div>
@@ -20,5 +13,4 @@
         <span id="pageNumbers"></span>
         <a><input type="button" value="next" id="next" /></a>
     </div>
-</body>
-</html>
+<?php include "footer.php"; ?>
