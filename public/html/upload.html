@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Upload</title>
+	<script language="javascript">
+	function addButton() {
+		document.getElementById('buttons').innerHTML += '<input id ="addsubmit" onclick="addButton()";  type="file" value= "Add File">';
+	}
+	</script>
+</head>
+<body>
+
+
+
+<h1>Upload</h1>
+<form>
+	Project Name:<br>
+	<input type="text" name = "projectname">
+	<br><br>
+
+	<input id ="addsubmit" onclick="addButton()";  type="submit" value= "Add File">
+</input>
+	<div id="buttons"></div>
+	<br><br>
+
+	Song Title:<br>
+	<input type="text" name = "songtitle">
+	<br><br>
+
+	Theme:<br>
+	<input type="text" name = "theme">
+	<br><br>
+
+	Language:<br> <!--Needs to draw languages from database -->
+	<select>
+		<option value = "english">English</option>
+		<option value = "turkish">Turkish</option>
+	</select>
+	<br><br>
+
+	Genre:<br>
+	<input type="text" name = "genre">
+	<br><br>
+
+	Continent:<br>
+	<select>
+		<option value = "africa">Africa</option>
+		<option value = "antarctica">Antarctica</option>
+		<option value = "asia">Asia</option>
+		<option value = "australia">Australia</option>
+		<option value = "europe">Europe</option>
+		<option value = "northamerica">North America</option>
+		<option value = "southamerica">South America</option>
+	</select>
+	<br><br>
+
+	Country:<br>
+	<select>
+		<option value = "turkey">Turkey</option>
+		<option value = "unitedstates">United States</option>
+	</select>
+	<br><br>
+
+	Composer:<br>
+	<input type="text" name = "composer">
+	<br><br>
+
+	Lyrics:<br>
+	<input type="file" name="lyrics" accept=".pdf">
+	<br><br>
+
+	Translation:<br> <!--should be able to add multiple translation fields -->
+	<select> <!--again, languages drawn from database -->
+		<option value = "english">English</option>
+		<option value = "turkish">Turkish</option>
+	</select> <br>
+	<input type="text" name = "translation">
+	<br><br>
+
+	Category:<br>
+	<input type="text" name = "category">
+	<br><br>
+
+	Copyright:<br> <!--Need to find copyright options -->
+	<select>
+		<option value = "sample">Sample</option>
+	</select>
+	<br><br>
+
+	Publisher:<br>
+	<input type="text" name = "publisher">
+	<br><br>
+
+	Link:<br>
+	<input type="text" name = "link">
+	<br><br>
+
+
+
+
+</form>
+
+</body>
+</html>
