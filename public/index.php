@@ -11,7 +11,7 @@
         <div style="width: 500px; text-align: center;">
             <a href="#search">
                 <div style="float:left;">
-                    <img src="img/search-blue.png" alt="Search" />
+                    <img src="img/search-blue.png" alt="Search" href="search.php"/>
                 </div>
             </a>
             <a href="#upload">
