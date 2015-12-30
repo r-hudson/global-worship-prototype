@@ -3,25 +3,30 @@
 <head>
 	<title>Upload</title>
 	<script language="javascript">
-	function addButton() {
-		document.getElementById('buttons').innerHTML += '<input id ="addsubmit" onclick="addButton()";  type="file" value= "Add File">';
+	function addFile() {
+        document.getElementById('buttons').innerHTML += '<input type="file"><br>';
+	}
+	function addLyrics() { //this needs to populate dropdown with languages from database. I temporarily hardcoded in English and Turkish
+        document.getElementById('lyricsFile').innerHTML += '<input type="file">'+
+        '<select><option value = "english">English</option><option value = "turkish">Turkish</option></select><br>';
 	}
 	</script>
 </head>
+
 <body>
 
-
-
 <h1>Upload</h1>
+
+
+	<input onclick="addFile()";  type="button" value= "Add File">
+     <div  id="buttons"></div>
+     <br><br>
+
 <form>
 	Project Name:<br>
 	<input type="text" name = "projectname">
 	<br><br>
-
-	<input id ="addsubmit" onclick="addButton()";  type="submit" value= "Add File">
 </input>
-	<div id="buttons"></div>
-	<br><br>
 
 	Song Title:<br>
 	<input type="text" name = "songtitle">
@@ -31,7 +36,7 @@
 	<input type="text" name = "theme">
 	<br><br>
 
-	Language:<br> <!--Needs to draw languages from database -->
+	Language:<br> <!--Also needs to draw languages from database and populate dropdown menu -->
 	<select>
 		<option value = "english">English</option>
 		<option value = "turkish">Turkish</option>
@@ -67,6 +72,9 @@
 
 	Lyrics:<br>
 	<input type="file" name="lyrics" accept=".pdf">
+	<input onclick="addLyrics()";  type="button" value= "Add Lyrics File">
+     </input>
+	<div  id="lyricsFile"></div>
 	<br><br>
 
 	Translation:<br> <!--should be able to add multiple translation fields -->
