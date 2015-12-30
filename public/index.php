@@ -13,17 +13,15 @@
     <div class="row">
         <div class="col-sm-6" style="text-align:right;">
             <a href="#search">
-                <div style="float:left;">
-                    <img src="img/search-blue.png" alt="Search" />
-                </div>
+                <img src="img/search-blue.png" alt="Search" />
             </a>
+            <button type="button" class="btn btn-default">Search</button>
         </div>
         <div class="col-sm-6" style="text-align:left;">
             <a href="#upload">
-                <div>
-                    <img src="img/upload-blue.png" alt="Upload" />
-                </div>
+                <img src="img/upload-blue.png" alt="Upload" />
             </a>
+            <button type="button" class="btn btn-default">Upload</button>
         </div>
     </div>
 
