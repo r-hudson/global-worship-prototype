@@ -11,7 +11,7 @@
 	$password = 'gwi-123!';
 
 	try {
-	    $dbh = new PDO($dsn, $user, $password);
+	    $dbh = new PDO($dsn, $username, $password);
 	} catch (PDOException $e) {
 	    echo 'Connection failed: ' . $e->getMessage();
 	}
