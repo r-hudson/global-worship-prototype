@@ -75,10 +75,14 @@ $(document).ready(function () {
     $("#genre").val(searchParams.genre || "All");
 
     //todo: get search results
-    var searchResults = [];
+    var searchResults = [{ id: 1, projectName: "project 1", composer: "composer 1" }, { id: 2, projectName: "project 2", composer: "composer 2" }];
     var curResult;
     for (curResult = 0; curResult < searchResults.length; curResult++) {
-        //todo: display something
+        var searchResult = $("<div></div>");
+        var resultLink = $("<a></a>", { href: "media.php?id=" + searchResults[curResult].id })
+        resultLink.text("\"" + searchResults[curResult].projectName + "\" - " + searchResults[curResult].composer);
+        searchResult.append(resultLink);
+        $("#searchResults").append(searchResult);
     }
     
     //todo: get numPages
@@ -94,21 +98,21 @@ $(document).ready(function () {
     }
 
     // set up the page numbers
-    var curPageNum;
-    for (curPageNum = Math.max(1, searchParams.page - 2); curPageNum <= Math.min(numPages, searchParams.page + 2); curPageNum++) {
-        var tempPageNum = searchParams.page;
+    var pageNumIdx;
+    for (pageNumIdx = Math.max(1, searchParams.page - 2) ; pageNumIdx <= Math.min(numPages, searchParams.page + 2) ; pageNumIdx++) {
+        var curPageNum = searchParams.page;
         
-        searchParams.page = curPageNum;
+        searchParams.page = pageNumIdx;
         var pageNumLink;
-        if (curPageNum !== tempPageNum) {
+        if (pageNumIdx !== curPageNum) {
             pageNumLink = $("<a></a>", { href: "search.php" + getQueryString(searchParams) })
         } else {
             pageNumLink = $("<span></span>")
         }
-        pageNumLink.html(curPageNum);
+        pageNumLink.html(pageNumIdx);
         $("#pageNumbers").append(pageNumLink);
 
-        searchParams.page = tempPageNum;
+        searchParams.page = curPageNum;
     }
 
     // set up the next button
