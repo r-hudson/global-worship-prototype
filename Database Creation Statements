@@ -1,0 +1,44 @@
+CREATE TABLE Project (id integer not null, name varchar(45), approved boolean, PRIMARY KEY (id))
+
+CREATE TABLE Genre (id integer not null, name varchar(45), description varchar(200), PRIMARY KEY(id))
+
+CREATE TABLE Location (id integer not null, name varchar(45), continent varchar(45), 
+latitude varchar(45), longitude varchar(45), PRIMARY KEY (id))
+
+CREATE TABLE Composer (id integer not null, name varchar(45), PRIMARY KEY(id))
+
+CREATE TABLE FileType (id integer not null, name varchar(45), PRIMARY KEY(id))
+
+CREATE TABLE Theme (id integer not null, name varchar(45), PRIMARY KEY(id))
+
+CREATE TABLE Copyright (id integer not null, name varchar(45), terms varchar(45), PRIMARY KEY(id))
+
+CREATE TABLE Language(id integer not null, name varchar(45), PRIMARY KEY(id))
+
+CREATE TABLE File (id integer not null,
+project_id integer not null, 
+genre_id integer not null, 
+location_id integer not null, 
+language_id integer not null, 
+composer_id integer not null, 
+theme_id integer not null, 
+copyright_id integer not null, 
+file_type_id integer not null,
+name varchar(45),
+size varchar(45),
+song_name varchar(45),
+file_length varchar(45),
+description varchar(200),
+publisher varchar(45),
+itunes_link varchar(45),
+amazon_link varchar(45),
+art_form varchar(45),
+PRIMARY KEY (id), 
+FOREIGN KEY(project_id) REFERENCES Project(id),
+FOREIGN KEY(genre_id) REFERENCES Genre(id), 
+FOREIGN KEY(location_id) REFERENCES Location(id),
+FOREIGN KEY(language_id) REFERENCES Language(id),
+FOREIGN KEY(composer_id) REFERENCES Composer(id),
+FOREIGN KEY(theme_id) REFERENCES Theme(id),
+FOREIGN KEY(copyright_id) REFERENCES Copyright(id),
+FOREIGN KEY(file_type_id) REFERENCES FileType(id));
