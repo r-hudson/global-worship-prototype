@@ -62,11 +62,136 @@
 	text-decoration:none;
 	color:#000;
 	text-transform:uppercase;
-    transition: all 0.3s ease-out;
+    	transition: all 0.3s ease-out;
 }
 
 .btn-outlined:hover {
 	background-color:#000;
 	color:#FFF;
 }
+
+.top-padding {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.top-padding2 {
+	margin-top: 15px;
+	margin-bottom:15px;
+}
+
+
+
+/* Search Style */
+
+body {
+
+  font-family: Arial, sans-serif;
+
+  font-size:1.25em;
+
+  color:#000;
+
+}
+
+.wrapper { /* Wrap this around content if it should max at a certain length and not reach the edges of the window */
+
+  max-width:40em;
+
+  margin:0 auto;
+
+  padding:0 2em;
+
+}
+
+h2 {
+
+  font-size:2.5em;
+
+}
+
+input.input-button {
+
+	font-family: Arial, sans-serif;
+
+	font-weight:bold;
+
+	text-align:center;
+
+	padding:0.75em;
+
+	border-width:0.25em;
+
+	border-color:#0A254E;
+
+	border-style:solid;
+
+	text-decoration:none;
+
+	color:#0A254E;
+
+	text-transform:uppercase;
+
+	background-color:#FFF;
+
+	font-size:1em;
+
+	transition: all 0.3s ease-out;
+
+}
+
+.input-button:hover {
+
+	background-color:#0A254E;
+
+	color:#FFF;
+
+}
+
+.form-div {
+
+	padding-bottom:1em;
+
+}
+
+form div span {
+
+	font-size:1em;
+
+	font-weight:bold;
+
+}
+
+.filter-field {
+
+	border-width:0.15em;
+
+	border-style:solid;
+
+	border-color:#000;
+
+	width:100%;
+
+	height:1.75em;
+
+	font-size:1em;
+
+	padding:0 0 0 0.5em;
+
+}
+
+div#pageNavigation {
+
+	margin-top:2em;
+
+	padding-top:2em;
+
+	border-top-width:0.25em;
+
+	border-top-color:#DDD;
+
+	border-top-style:solid;
+
+}
+
 
