@@ -1,0 +1,38 @@
+.navbar-default {
+  background-color: #181E27;
+}
+
+.navbar-default .navbar-brand {
+  margin-top: -15px;
+  color: #9BC7EE;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #9BC7EE;
+}
+
+.footer{
+  background-color: #181E27;
+}
+
+.footer .container {
+  margin: 20px auto;
+}
+
+.footer a > img {
+  height: 40px;
+  margin-top: -10px;
+}
+
+.footer .container a {
+  margin: auto 2px;
+  color: #9BC7EE;
+}
+
+.centered-img {
+  margin: 0 auto;
+}
+
+.centered-content {
+  text-align: center;
+}
