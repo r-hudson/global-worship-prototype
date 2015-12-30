@@ -99,7 +99,12 @@ $(document).ready(function () {
         var tempPageNum = searchParams.page;
         
         searchParams.page = curPageNum;
-        var pageNumLink = $("<a></a>", {href: "search.php" + getQueryString(searchParams)})
+        var pageNumLink;
+        if (curPageNum !== tempPageNum) {
+            pageNumLink = $("<a></a>", { href: "search.php" + getQueryString(searchParams) })
+        } else {
+            pageNumLink = $("<span></span>")
+        }
         pageNumLink.html(curPageNum);
         $("#pageNumbers").append(pageNumLink);
 
