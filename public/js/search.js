@@ -1,20 +1,97 @@
 function addDropDownOptions(selector, options) {
     var i;
     for (i = 0; i < options.length; i++) {
-        console.log(options[i]);
-        var option = $("<option></option>");
-        option.name = options[i];
-        option.value = options[i];
-        console.log(option.html());
+        // create the dom element for an dropdown option
+        var option = $("<option></option>", { name: encodeURIComponent(options[i]) });
+        option.append(options[i]);
 
+        // add the dropdown entry to the dropdown menu
         $(selector).append(option);
-        console.log($(selector).html);
     }
 }
 
-$(document).ready(function () {
-    //todo: get languages
-    var languages = ["English", "Spanish"];
+// Creates an associative of query string parameters and values
+function getQueryStrParams() {
+    // get the query string from the current url
+    var queryString = location.search;
+    var params = {};
+    if (queryString.length > 1 && queryString.substring(0, 1) === "?") {
+        // load all query string field-value pairs into an associative array
+        var queries = queryString.substring(1, queryString.length).split("&");
+        var i;
+        for (i = 0; i < queries.length; i++) {
+            var splitQuery = queries[i].split("=");
+            // only add valid field-value pairs
+            if (splitQuery.length === 2) {
+                // convert special characters to regular characters when adding to the associative array
+                // handle '+'s as a form replacement for a space
+                params[decodeURIComponent(splitQuery[0])] = decodeURIComponent(splitQuery[1].replace(/[+]/g, " "));
+            }
+        }
+    }
+    return params;
+}
 
-    addDropDownOptions("#languages", languages);
+function getQueryString(params) {
+    result = "?";
+    var key;
+    for (key in params) {
+        result += encodeURIComponent(key) + "=" + encodeURIComponent(params[key]) + "&";
+    }
+    // remove trailing '&' and use '+' instead of "%20" for spaces to match the form submission
+    result = result.substring(0, result.length - 1).replace(/%20/g, "+");
+    console.log(result);
+    return result;
+}
+
+$(document).ready(function () {
+    //todo: get art forms
+    var artForms = ["All"].concat(["Drama", "Visual Arts", "Dance", "Music", "Film", "Poetry", "Other"]);
+    addDropDownOptions("#artForm", artForms);
+
+    //todo: get languages
+    var languages = ["All"].concat(["English", "Spanish"]);
+    addDropDownOptions("#language", languages);
+
+    //todo: get genres
+    var genres = ["All"].concat(["Genre1", "Genre2"]);
+    addDropDownOptions("#genre", genres);
+
+    // get the query string as an associative array
+    var searchParams = getQueryStrParams();
+    // add a default page number
+    if (searchParams.hasOwnProperty("page")) {
+        searchParams.page = parseInt(searchParams.page);
+        if (isNaN(searchParams.page) || searchParams.page <= 0) {
+            searchParams.page = 1;
+        }
+    } else {
+        searchParams.page = 1;
+    }
+
+    // fill in the search form with the current search
+    $("#keyword").val(searchParams.keyword || "");
+    $("#artForm").val(searchParams.art_form || "All");
+    $("#language").val(searchParams.language || "All");
+    $("#genre").val(searchParams.genre || "All");
+
+    if (searchParams.page > 1) {
+        searchParams.page--;
+        $("#previous").parent().attr("href", "search.html" + getQueryString(searchParams));
+        searchParams.page++;
+    } else {
+        $("#previous").prop("disabled", true);
+    }
+
+    $("#pageNumbers").html(searchParams.page);
+
+    //todo: get numPages
+    var numPages = Number.POSITIVE_INFINITY;
+    if (searchParams.page + 1 < numPages) {
+        searchParams.page++;
+        $("#next").parent().attr("href", "search.html" + getQueryString(searchParams));
+        searchParams.page--;
+    } else {
+        $("#next").prop("disabled", true);
+    }
 })
