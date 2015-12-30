@@ -5,20 +5,29 @@
             <img src="img/logo-blue.png" alt="ETHNOS" />
         </div>
     </div>
-    <div class="centered-content">
-        <p>Harness the power of globalized technology to empower every nation, tribe, and tongue to experience and explore new worship expressions. </p>
-
-        <div style="width: 500px; text-align: center;">
-            <a href="#search">
-                <div style="float:left;">
+    <div class="row">
+        <div class="col-sm-12 centered-content">
+            <p>Harness the power of globalized technology to empower every nation, tribe, and tongue to experience and explore new worship expressions. </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6" style="text-align:right;">
+            <div class="centered-content">
+                <a href="#search">
                     <img src="img/search-blue.png" alt="Search" />
-                </div>
-            </a>
-            <a href="#upload">
-                <div>
+                </a>
+                <br>
+                <button type="button" class="btn btn-default">Search</button>
+            </div>
+        </div>
+        <div class="col-sm-6" style="text-align:left;">
+            <div class="centered-content">
+                <a href="#upload">
                     <img src="img/upload-blue.png" alt="Upload" />
-                </div>
-            </a>
+                </a>
+                <br>
+                <button type="button" class="btn btn-default">Upload</button>
+            </div>
         </div>
     </div>
 
