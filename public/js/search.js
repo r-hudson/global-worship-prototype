@@ -40,7 +40,6 @@ function getQueryString(params) {
     }
     // remove trailing '&' and use '+' instead of "%20" for spaces to match the form submission
     result = result.substring(0, result.length - 1).replace(/%20/g, "+");
-    console.log(result);
     return result;
 }
 
@@ -75,6 +74,17 @@ $(document).ready(function () {
     $("#language").val(searchParams.language || "All");
     $("#genre").val(searchParams.genre || "All");
 
+    //todo: get search results
+    var searchResults = [];
+    var curResult;
+    for (curResult = 0; curResult < searchResults.length; curResult++) {
+        //todo: display something
+    }
+    
+    //todo: get numPages
+    var numPages = Number.POSITIVE_INFINITY;
+
+    // set up the previous button
     if (searchParams.page > 1) {
         searchParams.page--;
         $("#previous").parent().attr("href", "search.html" + getQueryString(searchParams));
@@ -83,10 +93,20 @@ $(document).ready(function () {
         $("#previous").prop("disabled", true);
     }
 
-    $("#pageNumbers").html(searchParams.page);
+    // set up the page numbers
+    var curPageNum;
+    for (curPageNum = Math.max(1, searchParams.page - 2); curPageNum <= Math.min(numPages, searchParams.page + 2); curPageNum++) {
+        var tempPageNum = searchParams.page;
+        
+        searchParams.page = curPageNum;
+        var pageNumLink = $("<a></a>", {href: "search.html" + getQueryString(searchParams)})
+        pageNumLink.html(curPageNum);
+        $("#pageNumbers").append(pageNumLink);
 
-    //todo: get numPages
-    var numPages = Number.POSITIVE_INFINITY;
+        searchParams.page = tempPageNum;
+    }
+
+    // set up the next button
     if (searchParams.page + 1 < numPages) {
         searchParams.page++;
         $("#next").parent().attr("href", "search.html" + getQueryString(searchParams));
