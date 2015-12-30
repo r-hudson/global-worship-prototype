@@ -1,5 +1,5 @@
 <?php include "header.php"; ?>
-	<script type="text/javascript" src="../js/search.js"></script>
+	<script type="text/javascript" src="js/search.js"></script>
 	<form action="search.html">
         <div>Search keywords: <input type="text" name="keyword" id="keyword"></div>
         <div>Art form: <select name="art_form" id="artForm"></select></div>
