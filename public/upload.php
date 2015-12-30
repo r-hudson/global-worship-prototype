@@ -29,15 +29,18 @@
 	Song Title:
 	<input type="text" name = "songtitle">
 	<br><br>
-
-	Theme:
-	<input type="text" name = "theme">
+	
+	Artist:
+	<input type="text" name = "artist">
 	<br><br>
 
 	Genre:
 	<input type="text" name = "genre">
 	<br><br>
-
+	
+	Theme:
+	<input type="text" name = "theme">
+	<br><br>
 
 	<h2>Location</h2>
 
@@ -62,10 +65,6 @@
 
 	Region:
 	<input type="text" name = "region">
-	<br><br>
-
-	Composer:
-	<input type="text" name = "composer">
 	<br><br>
 
 	<h2>File(s)</h2>
