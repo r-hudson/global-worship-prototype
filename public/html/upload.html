@@ -3,30 +3,32 @@
 <head>
 	<title>Upload</title>
 	<script language="javascript">
-	function addFile() {
-        document.getElementById('buttons').innerHTML += '<input type="file"><br>';
+	function addFile() {//adds button for uploader to add another file
+		var d1 = document.getElementById('buttons');
+		d1.insertAdjacentHTML('beforeend', '<input type="file"><br>');
 	}
 	function addLyrics() { //this needs to populate dropdown with languages from database. I temporarily hardcoded in English and Turkish
-        document.getElementById('lyricsFile').innerHTML += '<input type="file">'+
-        '<select><option value = "english">English</option><option value = "turkish">Turkish</option></select><br>';
+		var d1 = document.getElementById('lyricsFile');
+		d1.insertAdjacentHTML('beforeend', '<input type="file" accept = ".pdf">'+
+		'<select><option value = "english">English</option><option value = "turkish">Turkish</option></select><br>');
 	}
 	</script>
 </head>
 
 <body>
 
-<h1>Upload</h1>
+	<h1>Upload</h1>
 
 
 	<input onclick="addFile()";  type="button" value= "Add File">
-     <div  id="buttons"></div>
-     <br><br>
+	<div  id="buttons"></div>
+	<br>
 
-<form>
-	Project Name:<br>
-	<input type="text" name = "projectname">
-	<br><br>
-</input>
+	<form>
+		Project Name:<br>
+		<input type="text" name = "projectname">
+		<br><br>
+	</input>
 
 	Song Title:<br>
 	<input type="text" name = "songtitle">
@@ -71,37 +73,28 @@
 	<br><br>
 
 	Lyrics:<br>
-	<input type="file" name="lyrics" accept=".pdf">
 	<input onclick="addLyrics()";  type="button" value= "Add Lyrics File">
-     </input>
-	<div  id="lyricsFile"></div>
-	<br><br>
+</input>
+<div  id="lyricsFile"></div>
+<br>
 
-	Translation:<br> <!--should be able to add multiple translation fields -->
-	<select> <!--again, languages drawn from database -->
-		<option value = "english">English</option>
-		<option value = "turkish">Turkish</option>
-	</select> <br>
-	<input type="text" name = "translation">
-	<br><br>
+Category:<br>
+<input type="text" name = "category">
+<br><br>
 
-	Category:<br>
-	<input type="text" name = "category">
-	<br><br>
+Copyright:<br> <!--Need to find copyright options -->
+<select>
+	<option value = "sample">Sample</option>
+</select>
+<br><br>
 
-	Copyright:<br> <!--Need to find copyright options -->
-	<select>
-		<option value = "sample">Sample</option>
-	</select>
-	<br><br>
+Publisher:<br>
+<input type="text" name = "publisher">
+<br><br>
 
-	Publisher:<br>
-	<input type="text" name = "publisher">
-	<br><br>
-
-	Link:<br>
-	<input type="text" name = "link">
-	<br><br>
+Link:<br>
+<input type="text" name = "link">
+<br><br>
 
 
 

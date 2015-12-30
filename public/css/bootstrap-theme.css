@@ -36,3 +36,31 @@
 .centered-content {
   text-align: center;
 }
+
+.right-float {
+	float: right;
+}
+
+.left-float{
+	float: left;
+}
+
+.btn-outlined {
+	font-family:'Montserrat', Arial, sans-serif;
+	font-style:bold;
+	text-align:center;
+	padding:0.75em;
+	border-width:0.25em;
+	border-color:#000;
+	border-style:solid;
+	text-decoration:none;
+	color:#000;
+	text-transform:uppercase;
+    transition: all 0.3s ease-out;
+}
+
+.btn-outlined:hover {
+	background-color:#000;
+	color:#FFF;
+}
+
