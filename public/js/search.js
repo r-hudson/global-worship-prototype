@@ -87,7 +87,7 @@ $(document).ready(function () {
     // set up the previous button
     if (searchParams.page > 1) {
         searchParams.page--;
-        $("#previous").parent().attr("href", "search.html" + getQueryString(searchParams));
+        $("#previous").parent().attr("href", "search.php" + getQueryString(searchParams));
         searchParams.page++;
     } else {
         $("#previous").prop("disabled", true);
@@ -99,7 +99,7 @@ $(document).ready(function () {
         var tempPageNum = searchParams.page;
         
         searchParams.page = curPageNum;
-        var pageNumLink = $("<a></a>", {href: "search.html" + getQueryString(searchParams)})
+        var pageNumLink = $("<a></a>", {href: "search.php" + getQueryString(searchParams)})
         pageNumLink.html(curPageNum);
         $("#pageNumbers").append(pageNumLink);
 
@@ -109,7 +109,7 @@ $(document).ready(function () {
     // set up the next button
     if (searchParams.page + 1 < numPages) {
         searchParams.page++;
-        $("#next").parent().attr("href", "search.html" + getQueryString(searchParams));
+        $("#next").parent().attr("href", "search.php" + getQueryString(searchParams));
         searchParams.page--;
     } else {
         $("#next").prop("disabled", true);
