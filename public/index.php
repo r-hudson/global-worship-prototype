@@ -14,7 +14,7 @@
     <div class="row top-padding2">
         <div class="col-sm-6" style="text-align:right;">
             <div class="centered-content right-float">
-                <a href="#search">
+                <a href="search.php">
                     <img src="img/search-blue.png" alt="Search" href="search.php"/>
                 </a>
                 <br>
@@ -23,7 +23,7 @@
         </div>
         <div class="col-sm-6" style="text-align:left;">
             <div class="centered-content left-float">
-                <a href="#upload">
+                <a href="upload.php">
                     <img src="img/upload-blue.png" alt="Upload" />
                 </a>
                 <br>
