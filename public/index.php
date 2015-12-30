@@ -11,14 +11,14 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-sm6" style="text-align:right;">
+        <div class="col-sm-6" style="text-align:right;">
             <a href="#search">
                 <div style="float:left;">
                     <img src="img/search-blue.png" alt="Search" />
                 </div>
             </a>
         </div>
-        <div class="col-sm6" style="text-align:left;">
+        <div class="col-sm-6" style="text-align:left;">
             <a href="#upload">
                 <div>
                     <img src="img/upload-blue.png" alt="Upload" />
