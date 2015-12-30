@@ -21,27 +21,27 @@
 	<h2>General</h2>
 
 	<form>
-		Project Name:<br>
+		Project Name:
 		<input type="text" name = "projectname">
 		<br><br>
 	</input>
 
-	Song Title:<br>
+	Song Title:
 	<input type="text" name = "songtitle">
 	<br><br>
 
-	Theme:<br>
+	Theme:
 	<input type="text" name = "theme">
 	<br><br>
 
-	Genre:<br>
+	Genre:
 	<input type="text" name = "genre">
 	<br><br>
 
 
 	<h2>Location</h2>
 
-	Continent:<br>
+	Continent:
 	<select>
 		<option value = "africa">Africa</option>
 		<option value = "antarctica">Antarctica</option>
@@ -53,18 +53,18 @@
 	</select>
 	<br><br>
 
-	Country:<br>
+	Country:
 	<select>
 		<option value = "turkey">Turkey</option>
 		<option value = "unitedstates">United States</option>
 	</select>
 	<br><br>
 
-	Region:<br>
+	Region:
 	<input type="text" name = "region">
 	<br><br>
 
-	Composer:<br>
+	Composer:
 	<input type="text" name = "composer">
 	<br><br>
 
@@ -76,25 +76,25 @@
 
 	<h2>Other</h2>
 
-	Tagwords (separate by commas):<br>
+	Tagwords (separate by commas):
 	<input type="text" name = "tags">
 	<br><br>
 
-	Copyright:<br> <!-- Need to find copyright options and populate dropdown-->
+	Copyright: <!-- Need to find copyright options and populate dropdown-->
 	<select>
 		<option value = "sample">Sample</option>
 	</select>
 	<br><br>
 
-	Publisher:<br>
+	Publisher:
 	<input type="text" name = "publisher">
 	<br><br>
 
-	iTunes Link:<br>
+	iTunes Link:
 	<input type="text" name = "iTunesLink">
 	<br><br>
 
-	Amazon Link:<br>
+	Amazon Link:
 	<input type="text" name = "amazonLink">
 	<br><br>
 
