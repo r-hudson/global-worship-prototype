@@ -71,10 +71,12 @@
 }
 
 .top-padding {
-	margin-top: 15px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .top-padding2 {
-	margin-top: 30px;
+	margin-top: 15px;
+	margin-bottom:15px;
 }
 }
