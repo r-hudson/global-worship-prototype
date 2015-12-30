@@ -1,8 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Upload</title>
-	<script language="javascript">
+<?php include "header.php"; ?>
+
+<script language="javascript">
 	function addFile() {
 		/*
 		Adds button for uploader to add new files.
@@ -12,18 +10,11 @@
 		d1.insertAdjacentHTML('beforeend', '<input type="file">'+
 			'<select><option value = "song">Music (.mp3, .wav)</option><option value = "video">Video (.mp4)</option>' + //file types
 			'<option value = "art">Art/Lyrics/Sheet Music (.jpg, .pdf)</option></select>' + 
-
 			'<select style="margin-left:50px; margin-right:50px"><option value = "english">English</option><option value = "turkish">Turkish</option></select>' + //needs to be populated with languages from database. I temporarily hardcoded in English and Turkish
-
 			'Amazon Link:<input style="margin-right:50px;" type="text" name = "amazonLink">' + //amazon purchase link
-
 			'iTunes Link:<input type="text" name = "iTunesLink"><br>'); //iTunes purchase link
-
 	}
-	</script>
-</head>
-
-<body>
+</script>
 
 	<h1>Upload</h1>
 
@@ -38,7 +29,7 @@
 	Song Title:
 	<input type="text" name = "songtitle">
 	<br><br>
-
+	
 	Artist:
 	<input type="text" name = "artist">
 	<br><br>
@@ -46,10 +37,10 @@
 	Genre:
 	<input type="text" name = "genre">
 	<br><br>
-
+	
 	Theme:
 	<input type="text" name = "theme">
-	<br><br>	
+	<br><br>
 
 	<h2>Location</h2>
 
@@ -75,8 +66,6 @@
 	Region:
 	<input type="text" name = "region">
 	<br><br>
-
-	
 
 	<h2>File(s)</h2>
 
@@ -112,5 +101,4 @@
 
 </form>
 
-</body>
-</html>
+<?php include "footer.php"; ?>
