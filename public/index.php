@@ -18,7 +18,7 @@
                     <img src="img/search-blue.png" alt="Search" href="search.php"/>
                 </a>
                 <br>
-                <button type="button" class="btn btn-outlined top-padding">Search Catalog</button>
+                <a href="search.php" type="button" class="btn btn-outlined top-padding">Search Catalog</a>
             </div>
         </div>
         <div class="col-sm-6" style="text-align:left;">
@@ -27,7 +27,7 @@
                     <img src="img/upload-blue.png" alt="Upload" />
                 </a>
                 <br>
-                <button type="button" class="btn btn-outlined top-padding">Upload a Resource</button>
+                <a href="upload.php" type="button" class="btn btn-outlined top-padding">Upload a Resource</a>
             </div>
         </div>
     </div>
